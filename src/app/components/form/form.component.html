@@ -1,0 +1,32 @@
+<div class="section-contact">
+    <div class="card">
+        <div class="card-body">
+            <h3>Contactanos</h3>
+            <hr />
+    
+            <form [formGroup]="contactForm" (ngSubmit)="onSendData(contactForm.value)">
+                <div class="form-data">
+                    <label for="fullname">Nombre Completo</label>
+                    <input type="text" formControlName="fullname" id="fullname" class="form-control">
+                </div>
+    
+                <div class="form-data">
+                    <label for="email">Correo Electronico</label>
+                    <input type="text" formControlName="email" id="email" class="form-control">
+                </div>
+    
+                <div class="form-data">
+                    <label for="phoneNumber">Numero de Celular</label>
+                    <input type="number" formControlName="phoneNumber" id="phoneNumber" class="form-control">
+                </div>
+    
+                <div class="form-data">
+                    <button class="btn-contact" type="submit" [disabled]="contactForm.invalid">
+                        Enviar mi registro
+                    </button>
+                </div>
+            </form>
+    
+        </div>
+    </div>
+</div>
